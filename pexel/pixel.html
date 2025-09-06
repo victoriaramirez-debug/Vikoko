@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+         body{
+          background-color: rgb(5, 90, 19);
+
+            .chewy-regular{
+            font-family: "Caveat", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            }
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+           
+        }
+        canvas {
+            border: 10px solid rgb(222, 204, 2);
+            background-color:rgb(250, 248, 129);
+           
+        }
+    </style>
+    <script>
+         var x = 0;
+        var y = 0;
+        var dx = 5;
+        var dy = 3;
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            console.log('animando');
+
+            var canvas = document.getElementById("micanvas");
+            var context = canvas.getContext("2d");
+
+           
+            context.clearRect(0, 0, innerWidth, innerHeight);
+
+           
+            context.fillStyle = "YellowGreen";
+            context.fillRect(356, 200, 90, 100);
+            context.fillRect(200, 290, 400, 200);
+            context.fillRect(180, 320, 50, 145);
+            context.fillRect(570, 320, 50, 145);
+            context.fillRect(270, 470, 250, 50);
+
+            context.fillStyle = "White";
+            context.fillRect(440, 140, 150, 150);
+            context.fillRect(210, 140, 150, 150);
+            context.fillRect(425, 170, 20, 100);
+            context.fillRect(585, 170, 20, 100);
+            context.fillRect(195, 170, 20, 100);
+            context.fillRect(355, 170, 20, 100);
+            context.fillRect(465, 120, 100, 20);
+            context.fillRect(235, 120, 100, 20);
+            context.fillRect(465, 285, 100, 20);
+            context.fillRect(235, 285, 100, 20);
+            context.fillRect(600, 185, 20, 70);
+            context.fillRect(410, 185, 20, 70);
+            context.fillRect(370, 185, 20, 70);
+            context.fillRect(180, 185, 20, 70);
+
+            context.fillStyle = "Pink";
+           context.fillRect(180, 350, 100, 100);
+           context.fillRect(200, 330, 60, 30);
+           context.fillRect(200, 440, 60, 30);
+           context.fillRect(520, 350, 100, 100);
+           context.fillRect(540, 330, 60, 30);
+           context.fillRect(540, 440, 60, 30);
+            
+            context.fillStyle = "Black";
+            context.fillRect(295, 200, 50, 40);
+            context.fillRect(455, 200, 50, 40);
+            context.fillRect(465, 230, 30, 20);
+            context.fillRect(465, 190, 30, 20);
+            context.fillRect(305, 190, 30, 20);
+            context.fillRect(305, 230, 30, 20); 
+            context.fillRect(380, 430, 20, 20); 
+            context.fillRect(370, 420, 20, 20); 
+            context.fillRect(350, 400, 20, 20);
+            context.fillRect(360, 410, 20, 20);
+            context.fillRect(340, 390, 20, 20);
+            context.fillRect(330, 380, 20, 20);
+            context.fillRect(320, 370, 20, 20);
+            context.fillRect(310, 360, 20, 20);
+            context.fillRect(430, 410, 20, 20);
+            context.fillRect(440, 400, 20, 20);
+            context.fillRect(450, 390, 20, 20);
+            context.fillRect(460, 380, 20, 20);
+            context.fillRect(470, 370, 20, 20);
+            context.fillRect(480, 360, 20, 20);
+            context.fillRect(420, 420, 20, 20);
+            context.fillRect(410, 430, 20, 20);
+            context.fillRect(390, 440, 30, 20);
+            
+             //(posicion x, posicion y,tamano x, tamano y )
+           
+            
+            context.font = '60pt Caveat';
+            context.fillStyle = 'Black';
+            context.fillText('Keroppi', x, y);
+
+
+           
+            if (x > 800 - 200 || x < 0) dx = -dx;
+            if (y > 600 - 150 || y < 0) dy = -dy;
+
+           
+            x += dx;
+            y += dy;
+        }
+        animate();
+    </script>
+</head>
+<body>
+    <canvas id="micanvas" width="800" height="600" ></canvas>
+</body>
+</html>
